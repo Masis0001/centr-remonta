@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,7 +10,7 @@
   <header class="header">
     <div class="container">
       <h1>Центр Ремонта</h1>
-      <p class="tagline">Ваше устройство, в центре нашего внимания  </p>
+      <p class="tagline">Ваше устройство, в центре нашего внимания</p>
     </div>
   </header>
 
@@ -44,25 +43,30 @@
       <li>Установка Windows — от 1000 ₽</li>
       <li>Чистка от пыли — от 800 ₽</li>
       <li>Замена батареи — от 1000 ₽</li>
-	  <li>Наклеить защитнео стекло — от 150 ₽</li>
+      <li>Наклеить защитное стекло — от 150 ₽</li>
     </ul>
   </section>
 
   <section class="contact container">
     <h2>Оставьте заявку</h2>
-    <form>
-      <input type="text" placeholder="Устройство" required />
-      <input type="text" placeholder="Тип поломки" required />
-      <input type="tel" placeholder="Ваш телефон" required />
-      <button type="submit">Отправить заявку</button>
-    </form>
+    <button id="openTelegram">Отправить заявку</button>
   </section>
 
   <footer class="footer container">
-    <p>📞 <a href="tel:+79530090013">8 953 009 0013</a></p>
-    <p>📍 г.Нижний Тагил, ул. Газетная д.28</p>
+    <p>📞 <a href="tel:+79530090013">+7 953 009 0013</a></p>
+    <p>📍 г. Нижний Тагил, ул. Газетная д.28</p>
     <p>🕒 Будни: 10:00–19:00 | Выходные: 13:00–19:00</p>
     <p>&copy; 2025 Центр Ремонта</p>
   </footer>
+
+  <script>
+    document.getElementById('openTelegram').addEventListener('click', function () {
+      const message = encodeURIComponent(
+        Здравствуйте! Я хочу оставить заявку на ремонт.
+      );
+      const tgUrl = https://t.me/CentrNt_RemontaBot?start&text=${message};
+      window.open(tgUrl, '_blank');
+    });
+  </script>
 </body>
 </html>
