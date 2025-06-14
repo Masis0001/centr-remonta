@@ -1,16 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Современный сайт</title>
-  <meta name="description" content="Адаптивный сайт с новым стилем">
+  <title>Центр Ремонта — Telegram Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fdfaf6;
-      --primary: #d47b55;
-      --text: #2c2c2c;
-      --accent: #ffeecc;
+      --tg-bg: #f9f9f9;
+      --tg-blue: #0088cc;
+      --tg-text: #2e2e2e;
+      --tg-gray: #e6e6e6;
+      --tg-card: #ffffff;
+      --tg-shadow: rgba(0, 0, 0, 0.05);
     }
 
     * {
@@ -20,112 +23,153 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: 'SF Pro Display', sans-serif;
+      background-color: var(--tg-bg);
+      color: var(--tg-text);
       line-height: 1.6;
-      padding: 0;
     }
 
     header {
-      background-color: var(--primary);
-      color: white;
-      padding: 30px 20px;
+      background-color: var(--tg-card);
+      padding: 60px 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px var(--tg-shadow);
     }
 
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffe0c1;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    h1, h2 {
-      color: var(--primary);
-    }
-
-    h1 {
-      margin-bottom: 10px;
+    header h1 {
+      color: var(--tg-blue);
       font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      background: var(--tg-card);
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px var(--tg-shadow);
     }
 
     h2 {
-      margin: 30px 0 10px;
-      font-size: 24px;
+      color: var(--tg-blue);
+      margin-bottom: 15px;
     }
 
-    p {
-      margin-bottom: 15px;
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      background-color: var(--tg-blue);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
       font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0077b3;
+    }
+
+    .review {
+      background: var(--tg-gray);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: var(--accent);
+      background: var(--tg-card);
       font-size: 14px;
       color: #555;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 700px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      main {
-        padding: 20px;
-        margin: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
+      margin-top: 40px;
+      border-top: 1px solid var(--tg-gray);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Привет, мир!</h1>
-    <nav>
-      <a href="#">Главная</a>
-      <a href="#">О нас</a>
-      <a href="#">Контакты</a>
-    </nav>
-  </header>
+<header>
+  <h1>Центр Ремонта</h1>
+  <p>Ваше устройство, в центре нашего внимания </p>
+</header>
 
-  <main>
-    <h2>Добро пожаловать</h2>
-    <p>Это обновлённая версия сайта с улучшенным дизайном. Использован минимализм, плавные цвета и адаптивность под мобильные устройства.</p>
+<main class="container">
+  <section>
+    <h2>Наши услуги</h2>
+    <ul>
+      <li>Замена экрана смартфона / ноутбука</li>
+      <li>Установка Windows и драйверов</li>
+      <li>Удаление вирусов и оптимизация</li>
+      <li>Замена аккумуляторов и комплектующих</li>
+      <li>Чистка от пыли и перегрева</li>
+      <li>Диагностика и консультация</li>
+    </ul>
+  </section>
 
-    <h2>Что здесь?</h2>
-    <p>Простой шаблон сайта без лишнего — ты можешь легко изменить заголовки, добавить кнопки, формы или подключить свои стили.</p>
-  </main>
+  <section>
+    <h2>Почему выбирают нас?</h2>
+    <ul>
+      <li><strong>Премиум-сервис</strong> с человеческим лицом</li>
+      <li><strong>Прозрачность</strong> — без «но» и «если»</li>
+      <li><strong>Гарантия</strong> — до 6 месяцев</li>
+      <li><strong>Скорость</strong> — от 30 минут</li>
+    </ul>
+  </section>
 
-  <footer>
-    © 2025 Мой современный сайт. Сделано с душой.
+  <section>
+    <h2>Отзывы</h2>
+    <div class="review">
+      <p>«Сдавал iPhone с разбитым экраном. Вернули как новый. Это уровень!»</p>
+      <span>— Михаил</span>
+    </div>
+    <div class="review">
+      <p>«Ремонт Ноутбука с перегревом — сделали всё, ещё и настроили систему. Спасибо!»</p>
+      <span>— Анна</span>
+    </div>
+    <div class="review">
+      <p>«Поставили Windows и настроили всё — даже принтер. Я в шоке, насколько заботливо.»</p>
+      <span>— Илья</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Оставьте заявку</h2>
+    <a href="https://t.me/your_username" class="cta-button">Написать в Telegram</a>
+  </section>
+</main>
+
+<footer>
+  © 2025 Центр Ремонта — Нижний Тагил. Все права защищены.
+</footer>
+
+</body>
+</html>
+
   </footer>
 
 </body>
