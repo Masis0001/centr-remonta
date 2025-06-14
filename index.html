@@ -3,69 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Центр Ремонта — Нижний Тагил</title>
+  <title>Центр Ремонта — Премиум-сервис Нижнего Тагила</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
+
+  <header class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video-bg.mp4" type="video/mp4">
+      <!-- fallback -->
+      <img src="fallback.jpg" alt="Фон" />
+    </video>
+    <div class="overlay"></div>
     <div class="container">
-      <h1>Центр Ремонта</h1>
-      <p class="tagline">Ваше устройство, в центре нашего внимания</p>
+      <h1 class="hero-title" data-aos="fade-up">Ваша техника. Как новая.</h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Ремонт, который чувствуется как забота</p>
+      <a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="400">Оставить заявку</a>
     </div>
   </header>
 
-  <section class="services container">
-    <h2>Наши услуги</h2>
-    <ul>
-      <li>Замена экрана смартфона / ноутбука</li>
-      <li>Установка Windows и драйверов</li>
-      <li>Удаление вирусов и оптимизация</li>
-      <li>Замена аккумуляторов и комплектующих</li>
-      <li>Чистка от пыли и перегрева</li>
-      <li>Диагностика и консультация</li>
+  <section class="features container">
+    <h2 data-aos="fade-right">Что мы делаем идеально</h2>
+    <div class="grid">
+      <div class="card" data-aos="zoom-in">...</div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">...</div>
+      <!-- все карточки с анимацией -->
+    </div>
+  </section>
+
+  <section class="whyus container">
+    <h2 data-aos="fade-left">Почему выбирают нас</h2>
+    <ul data-aos="fade-up">
+      <li><strong>Премиум-сервис</strong> с человеческим лицом.</li>
+      <li><strong>Прозрачность</strong> — без «но» и «если».</li>
+      <li><strong>Гарантия</strong> — до 6 месяцев.</li>
+      <li><strong>Скорость</strong> — от 30 минут.</li>
     </ul>
   </section>
 
-  <section class="benefits container">
-    <h2>Почему выбирают нас?</h2>
-    <ul>
-      <li>Работаем быстро и надёжно</li>
-      <li>Честные цены и гарантия</li>
-      <li>Опыт более 7 лет</li>
-      <li>Удобное расположение в Нижнем Тагиле</li>
-    </ul>
+  <section class="reviews container">
+    <h2 data-aos="fade-up">Отзывы</h2>
+    <div class="grid">
+      <div class="review" data-aos="fade-up" data-aos-delay="100">
+        <p>«Сдавал iPhone с разбитым экраном. Вернули как новый. Быстро, вежливо, красиво. Это уровень!»</p>
+        <span>— Михаил, предприниматель</span>
+      </div>
+      <div class="review" data-aos="fade-up" data-aos-delay="200">
+        <p>«Ремонт MacBook с перегревом — сделали всё, ещё и настроили систему. Спасибо!»</p>
+        <span>— Анна, дизайнер</span>
+      </div>
+      <div class="review" data-aos="fade-up" data-aos-delay="300">
+        <p>«Поставили Windows и настроили всё — даже принтер. Я в шоке, насколько заботливо.»</p>
+        <span>— Илья, преподаватель</span>
+      </div>
+    </div>
   </section>
 
-  <section class="prices container">
-    <h2>Примерные цены</h2>
-    <ul>
-      <li>Замена дисплея — от 1200 ₽</li>
-      <li>Установка Windows — от 1000 ₽</li>
-      <li>Чистка от пыли — от 800 ₽</li>
-      <li>Замена батареи — от 1000 ₽</li>
-      <li>Наклеить защитное стекло — от 150 ₽</li>
-    </ul>
+  <section class="contact container" id="contact">
+    <h2 data-aos="zoom-in">Связаться с нами</h2>
+    <button id="openTelegram" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Написать в Telegram</button>
   </section>
 
-  <section class="contact container">
-    <h2>Оставьте заявку</h2>
-    <button id="openTelegram">Отправить заявку</button>
-  </section>
-
-  <footer class="footer container">
-    <p>📞 <a href="tel:+7 9530090013">+7 953 009 0013</a></p>
-    <p>📍 г. Нижний Тагил, ул. Газетная д.28</p>
-    <p>🕒 Будни: 10:00–19:00 | Выходные: 13:00–19:00</p>
+  <footer class="footer container" data-aos="fade-in">
+    <p>📞 <a href="tel:+79530090013">8 953 009 0013</a></p>
+    <p>📍 Нижний Тагил, ул. Газетная, 28</p>
+    <p>🕒 Пн–Пт: 10:00–19:00 | Сб–Вс: 13:00–19:00</p>
     <p>&copy; 2025 Центр Ремонта</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script>
     document.getElementById('openTelegram').addEventListener('click', function () {
-      const message = encodeURIComponent(
-        Здравствуйте! Я хочу оставить заявку на ремонт.
-      );
-      const tgUrl = https://t.me/CentrNt_RemontaBot?start&text=${message};
-      window.open(tgUrl, '_blank');
+      const msg = encodeURIComponent("Здравствуйте! Хочу оставить заявку на ремонт.");
+      window.open(`https://t.me/CentrNt_RemontaBot?start&text=${msg}`, '_blank');
     });
   </script>
 </body>
