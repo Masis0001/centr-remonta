@@ -3,83 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Центр Ремонта — Премиум-сервис Нижнего Тагила</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Простой адаптивный сайт на HTML и CSS">
+  <title>Мой сайт</title>
+  <style>
+    /* Сброс стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #0077cc;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      main {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="video-bg.mp4" type="video/mp4">
-      <!-- fallback -->
-      <img src="fallback.jpg" alt="Фон" />
-    </video>
-    <div class="overlay"></div>
-    <div class="container">
-      <h1 class="hero-title" data-aos="fade-up">Ваша техника. Как новая.</h1>
-      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Ремонт, который чувствуется как забота</p>
-      <a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="400">Оставить заявку</a>
-    </div>
+  <header>
+    <h1>Добро пожаловать на мой сайт</h1>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+    </nav>
   </header>
 
-  <section class="features container">
-    <h2 data-aos="fade-right">Что мы делаем идеально</h2>
-    <div class="grid">
-      <div class="card" data-aos="zoom-in">...</div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">...</div>
-      <!-- все карточки с анимацией -->
-    </div>
-  </section>
+  <main>
+    <h2>О сайте</h2>
+    <p>Это простой сайт, созданный вручную на HTML и CSS. Он адаптирован под мобильные устройства и не использует изображения или сторонние библиотеки.</p>
 
-  <section class="whyus container">
-    <h2 data-aos="fade-left">Почему выбирают нас</h2>
-    <ul data-aos="fade-up">
-      <li><strong>Премиум-сервис</strong> с человеческим лицом.</li>
-      <li><strong>Прозрачность</strong> — без «но» и «если».</li>
-      <li><strong>Гарантия</strong> — до 6 месяцев.</li>
-      <li><strong>Скорость</strong> — от 30 минут.</li>
-    </ul>
-  </section>
+    <h2>Контент</h2>
+    <p>Вы можете редактировать этот шаблон, добавлять разделы, изменять стили, вставлять формы или подключать скрипты.</p>
+  </main>
 
-  <section class="reviews container">
-    <h2 data-aos="fade-up">Отзывы</h2>
-    <div class="grid">
-      <div class="review" data-aos="fade-up" data-aos-delay="100">
-        <p>«Сдавал iPhone с разбитым экраном. Вернули как новый. Быстро, вежливо, красиво. Это уровень!»</p>
-        <span>— Михаил, предприниматель</span>
-      </div>
-      <div class="review" data-aos="fade-up" data-aos-delay="200">
-        <p>«Ремонт MacBook с перегревом — сделали всё, ещё и настроили систему. Спасибо!»</p>
-        <span>— Анна, дизайнер</span>
-      </div>
-      <div class="review" data-aos="fade-up" data-aos-delay="300">
-        <p>«Поставили Windows и настроили всё — даже принтер. Я в шоке, насколько заботливо.»</p>
-        <span>— Илья, преподаватель</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact container" id="contact">
-    <h2 data-aos="zoom-in">Связаться с нами</h2>
-    <button id="openTelegram" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Написать в Telegram</button>
-  </section>
-
-  <footer class="footer container" data-aos="fade-in">
-    <p>📞 <a href="tel:+79530090013">8 953 009 0013</a></p>
-    <p>📍 Нижний Тагил, ул. Газетная, 28</p>
-    <p>🕒 Пн–Пт: 10:00–19:00 | Сб–Вс: 13:00–19:00</p>
-    <p>&copy; 2025 Центр Ремонта</p>
+  <footer>
+    &copy; 2025 Мой сайт. Все права защищены.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
-  <script>
-    document.getElementById('openTelegram').addEventListener('click', function () {
-      const msg = encodeURIComponent("Здравствуйте! Хочу оставить заявку на ремонт.");
-      window.open(`https://t.me/CentrNt_RemontaBot?start&text=${msg}`, '_blank');
-    });
-  </script>
 </body>
 </html>
