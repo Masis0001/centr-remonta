@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Центр Ремонта — Telegram Style</title>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
       --tg-bg: #f9f9f9;
@@ -100,14 +101,23 @@
       margin-bottom: 15px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    .footer {
       background: var(--tg-card);
-      font-size: 14px;
-      color: #555;
+      text-align: center;
+      padding: 30px 20px;
       margin-top: 40px;
       border-top: 1px solid var(--tg-gray);
+      font-size: 15px;
+      color: #555;
+    }
+
+    .footer a {
+      color: var(--tg-blue);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -115,7 +125,7 @@
 
 <header>
   <h1>Центр Ремонта</h1>
-  <p>Ваше устройство, в центре нашего внимания. </p>
+  <p>Премиум-сервис в Нижнем Тагиле</p>
 </header>
 
 <main class="container">
@@ -128,14 +138,13 @@
       <li>Замена аккумуляторов и комплектующих</li>
       <li>Чистка от пыли и перегрева</li>
       <li>Диагностика и консультация</li>
-      <li>Чистка динамиков, разъемов</li>
     </ul>
   </section>
 
   <section>
     <h2>Почему выбирают нас?</h2>
     <ul>
-      <li><strong>Надежный-сервис</strong> приемлемые цены</li>
+      <li><strong>Премиум-сервис</strong> с человеческим лицом</li>
       <li><strong>Прозрачность</strong> — без «но» и «если»</li>
       <li><strong>Гарантия</strong> — до 6 месяцев</li>
       <li><strong>Скорость</strong> — от 30 минут</li>
@@ -149,7 +158,7 @@
       <span>— Михаил</span>
     </div>
     <div class="review">
-      <p>«Ремонт Ноутбука с перегревом — сделали всё, ещё и настроили систему. Спасибо!»</p>
+      <p>«Ремонт MacBook с перегревом — сделали всё, ещё и настроили систему. Спасибо!»</p>
       <span>— Анна</span>
     </div>
     <div class="review">
@@ -160,18 +169,24 @@
 
   <section>
     <h2>Оставьте заявку</h2>
-    <a href="https://t.me/CentrNt_RemontaBot" class="cta-button">Написать в Telegram</a>
+    <button id="openTelegram" class="cta-button">Написать в Telegram</button>
   </section>
 </main>
 
-<footer>
-  © 2025 Центр Ремонта — Нижний Тагил. Все права защищены.
+<footer class="footer container" data-aos="fade-in">
+  <p>📞 <a href="tel:+79530090013">8 953 009 0013</a></p>
+  <p>📍 Нижний Тагил, ул. Газетная, 28</p>
+  <p>🕒 Пн–Пт: 10:00–19:00 | Сб–Вс: 13:00–19:00</p>
+  <p>&copy; 2025 Центр Ремонта</p>
 </footer>
 
-</body>
-</html>
-
-  </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  document.getElementById('openTelegram').addEventListener('click', function () {
+    const msg = encodeURIComponent("Здравствуйте! Хочу оставить заявку на ремонт.");
+    window.open(`https://t.me/CentrNt_RemontaBot?start&text=${msg}`, '_blank');
+  });
+</script>
 </body>
 </html>
